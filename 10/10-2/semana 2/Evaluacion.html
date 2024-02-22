@@ -1,0 +1,30 @@
+<script>
+    var hrs=0;
+hrs=parseFloat(prompt("ingrese las horas"));
+    var mins=0;
+   mins=parseFloat(prompt("ingrese los minutos"));
+    var seg=0;
+seg=parseFloat(prompt("ingrese los segundos"));
+var hrsmins=0;
+hrsamins=hrs*60;
+var hrsaseg=0;
+hrsaseg=hrs*3600;
+var minsahrs=0;
+minsahrs=mins/60;
+var minsaseg=0;
+minsaseg=mins*60;
+var segahrs=0;
+segahrs=seg/3600;
+var thrs=0;
+thrs=hrs+minsahrs+segahrs;
+var tmins=0;
+tmins=mins+hrsamins+segahrs;
+var tseg=0;
+tseg=seg+minsaseg+hrsaseg;
+document.writeln("el tiempo total es:"+"<BR>");
+document.writeln("en horas" + thrs +"<BR>");
+document.writeln("en minutos" +tmins +"<BR>");
+document.writeln("en segundos" +tseg+ "<BR>");
+</script>
+
+                    

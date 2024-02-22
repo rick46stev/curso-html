@@ -1,0 +1,30 @@
+<script>
+//Una empresa desea calcular la comisión que le deben pagar a cada uno de los vendedores, 
+//al vendedor le corresponde el 2.5 % de la comisión, sobre aquellos artículos cuyos precios sean
+// inferiores a $100.000 y el 75 % cuyo precio sea de $100.000 o más. El programa debe ser flexible
+// para n vendedores.
+document.writeln("autor Steven Maurcio Gustin Estacio <BR> ")
+var qven = parseInt(promt("ingrese la cantidad de vendedores de la empresa"));
+var vendedores = 0;
+var comtotal = 0;
+
+for(var i = 0; i < qven; i++) {
+    var nombre = prompt("ingrese el nombre del vendedor #"+ (i+1));
+    var art = prompt("ingrese la cantidad de articulos vendidos pro el vendedor #", (i+1));
+    vendedores({nombre,art});
+    for(var j =0; j < art; j++) {
+        var  venta = parseInt(prompt("ingrese el valor del articulo" , (j+1) , "venta del vendedor #",(i+1)));
+        vendedores({ venta});
+        if(venta < 100000) {
+            comision = venta * 0.025;
+        } else {
+            comision = venta *0.75;
+        }
+        comtotal = comision + comtotal;
+    }
+    document.writeln("el vendedor " , nombre , "tiene una comision de: ",comtotal , "<br>");
+    comtotal = 0;
+}
+
+
+</script>
